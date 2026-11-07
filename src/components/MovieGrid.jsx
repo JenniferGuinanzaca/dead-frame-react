@@ -1,4 +1,6 @@
-function MovieGrid(){
+import MovieCard from "./MovieCard";
+
+function MovieGrid({movies}){
     return(
         <section id="archive" className="archive">
             <div className="archive-header">
@@ -16,7 +18,9 @@ function MovieGrid(){
             </div>
 
             <div className="movie-grid">
-               {/* will work on this later */}
+               {movies.map((movie)=>(
+                <MovieCard key={movie.id} movie={movie} />
+               ))}
             </div>
         </section>
     );
