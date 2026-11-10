@@ -1,6 +1,6 @@
 import MovieCard from "./MovieCard";
 
-function MovieGrid({movies}){
+function MovieGrid({ movies = [] }) {
     return(
         <section id="archive" className="archive">
             <div className="archive-header">
