@@ -5,9 +5,14 @@ function MovieGrid({ movies = [] }) {
     const [selectedCategory, setSelectedCategory] = useState("All");
     const [searchTerm, setSearchTerm] = useState("");
 
-    const filteredMovies= movies.filter((movie) => 
-        (movie.title || "").toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    const filteredMovies= movies.filter((movie) => {
+    
+       const matchCategory= (movie.title || "").toLowerCase().includes(searchTerm.toLowerCase())
+
+        const matchSearch = selectedCategory === "All" || movie.category === selectedCategory;
+
+        return matchSearch && matchCategory;
+    });
 
     return(
         <section id="archive" className="archive">
