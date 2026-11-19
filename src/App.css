@@ -1,0 +1,461 @@
+/* Dead Frame CSS */
+
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0b0b0b;
+    color: #e8e8e8;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+header {
+    border-bottom: 1px solid #242424;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+/* NavBar */
+.navbar-content > a {
+    color: #e8e8e8;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #e8e8e8;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #a32626;
+}
+
+/* Hero */
+
+#hero {
+    padding: 8rem 1.25rem 5rem;
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 700px;
+    max-width: 100%;
+    display: block;
+}
+
+.small-Heading {
+    color: #a32626;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    color: #999;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #a32626;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.9rem 1.5rem;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background-color: #c52f2f;
+}
+
+/* Archive */
+
+#archive {
+    padding: 5rem 1.25rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.archive-header {
+    margin-bottom: 2rem;
+}
+
+.archive-header h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: normal;
+}
+
+.archive-header p:last-child {
+    color: #999;
+}
+
+
+.archive-header p:first-child {
+    color: #a32626;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Filter buttons */
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.filter-buttons button {
+    background-color: transparent;
+    color: #d0d0d0;
+    border: 1px solid #333;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    border-color: #a32626;
+    color: #ffffff;
+}
+
+.filter-buttons button:focus {
+    background-color: #a32626;
+    color: #ffffff;
+    border-color: #a32626;
+}
+
+.searchContainer {
+    margin-bottom: 2rem;
+}
+
+.searchContainer input {
+    width: 100%;
+    max-width: 450px;
+    background-color: #151515;
+    color: #e8e8e8;
+    border: 1px solid #333;
+    padding: 0.75rem 1rem;
+    outline: none;
+}
+
+.searchContainer input:focus {
+    border-color: #a32626;
+}
+
+.searchContainer input::placeholder {
+    color: #999;
+}
+
+/* Movie grid */
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.movie-card {
+    background-color: #151515;
+    border: 1px solid #242424;
+    padding: 1rem;
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.movie-card h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.movie-card p {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* About */
+
+.about {
+    padding: 5rem 1.25rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-description {
+    color: #999;
+}
+
+/* Footer */
+
+footer {
+    border-top: 1px solid #242424;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    color: #a32626;
+    font-size: 0.85rem;
+}
+
+/* Loading and Error */
+
+main > p {
+    color: #999;
+    text-align: center;
+    padding: 2rem;
+}
+
+main > div {
+    text-align: center;
+    padding: 1rem;
+}
+
+main > div button {
+    background-color: #a32626;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+main > div button:hover {
+    background-color: #c52f2f;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+
+    nav {
+        padding: 1rem;
+    }
+
+    .navbar-content > a {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    /* Hero */
+
+    #hero {
+        display: block;
+        padding: 4rem 1rem 3rem;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .small-Heading {
+        font-size: 0.65rem;
+        margin-bottom: 0.75rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Archive */
+
+    #archive {
+        padding: 3rem 1rem;
+    }
+
+    .archive-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .archive-header h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .archive-header p:last-child {
+        font-size: 0.9rem;
+    }
+
+    /* Filter buttons */
+
+    .filter-buttons {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .filter-buttons button {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    /* Search */
+
+    .searchContainer {
+        margin-bottom: 2rem;
+    }
+
+    /* Movie cards */
+
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .movie-card {
+        padding: 0.6rem;
+    }
+
+    .movie-card img {
+        margin-bottom: 0.6rem;
+    }
+
+    .movie-card h3 {
+        font-size: 0.95rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+
+    .movie-card p {
+        font-size: 0.75rem;
+        line-height: 1.4;
+        margin-bottom: 0.3rem;
+    }
+
+    /* About */
+
+    .about {
+        padding: 3rem 1rem;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .about-description {
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Small phones */
+
+@media (max-width: 480px) {
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .nav-links {
+        gap: 0.75rem;
+    }
+
+    #hero {
+        padding: 3rem 1rem 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+    }
+
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .movie-card p {
+        font-size: 0.8rem;
+    }

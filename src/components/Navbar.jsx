@@ -2,7 +2,7 @@ function NavBar(){
     return(
         <header className="navbar">
             <nav className="navbar-content">
-                <a href="#">Dead Frame</a>
+                <a href="#">DEAD FRAME</a>
 
                 <div className="nav-links">
                     <a href="#archive">Archive</a>
