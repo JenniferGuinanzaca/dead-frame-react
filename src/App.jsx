@@ -6,7 +6,7 @@ import usefetch from "./hooks/usefetch";
 
 function App() {
   const API_KEY = import.meta.env.VITE_API_KEY;
-  const { data, loading, error } = usefetch(
+  const { data, loading, error, retry } = usefetch(
     curatedMovies,
     API_KEY
   );
@@ -19,7 +19,13 @@ function App() {
         <Hero />
         
         {loading && <p>Loading movies...</p>}
-        {error && <p>Error:{error}</p>}
+        {error && (
+          <div>
+            <p> Error: {error}</p>
+            <button onClick={retry}>Try Again</button>
+
+          </div>
+        )}
 
         {!loading && !error && (
         <MovieGrid movies={data || []} />

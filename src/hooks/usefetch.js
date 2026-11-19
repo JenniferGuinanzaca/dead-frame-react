@@ -4,8 +4,14 @@ function usefetch(curatedMovies, apiKey) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [retryCount, setRetryCount] = useState(0);
+
+  function retry() {
+    setRetryCount((count) => count + 1);
+  }
 
   useEffect(() => {
+    let cancelled = false;
     async function fetchMovies() {
       try {
         setLoading(true);
@@ -53,9 +59,14 @@ function usefetch(curatedMovies, apiKey) {
     }
 
     fetchMovies();
-  }, [curatedMovies, apiKey]);
 
-  return { data, loading, error };
+    return () => {
+      cancelled = true;
+    };
+    
+  }, [curatedMovies, apiKey, retryCount]);
+
+  return { data, loading, error, retry };
 }
 
 export default usefetch;
