@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import MovieGrid from "./components/MovieGrid";
 import curatedMovies from "./components/data/curatedMovies";
 import usefetch from "./hooks/usefetch";
+import Footer from "./components/Footer";
+import About from "./components/About";
 
 function App() {
   const API_KEY = import.meta.env.VITE_API_KEY;
@@ -31,6 +33,10 @@ function App() {
         <MovieGrid movies={data || []} />
       )}
       </main>
+
+      <About />
+
+      <Footer />
     </>
   );
 }
